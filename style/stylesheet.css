@@ -2,75 +2,60 @@
 {
     background-color: #F7F8F0;
     margin:0px;
+    text-align: center;
 }
 header
 {
     display: grid;
-    grid-template-columns: auto auto auto ;
+    grid-template-columns: auto 2fr auto ;
     align-items: center;
-    border: 1px solid #355872;
+    border: 2px solid #355872;
     text-align: center;
+    margin-bottom: 45px;
 }
 .logo
 {
     width: auto;
-    height: 125px; 
+    height: 85px;
+    margin-left: 10px; 
 }
-nav a
-{ 
-    margin: 0 10px;
+.Link
+{
+    padding: 10px; 
+    margin: 0 12.5px;
     font-family: sans-serif;
     color: #355872;
     text-decoration: none;
-    font-weight: bold;
     font-size:larger;
+    font-weight: bold;
 }
-.btn {
-    font-family: sans-serif;
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: #355872; 
-    color: #F7F8F0;               
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
-    margin: 0 5px;
-    font-size:larger;
-    place-items:  right;
+.Link.active
+{
+    color: #729ed8;
+    border-bottom: 2px solid #729ed8;
+    border-right: 2px solid #729ed8;
+    border-radius: 12px;
+    text-shadow: 1px 1px 2px #2a445a;
 }
 .Link:hover {
-    color: #2a445a; 
+    color: #2a445a;
+    border-bottom: 2px solid #729ed8;
+    border-right: 2px solid #729ed8;
+    text-shadow: 1px 1px 2px #2a445a;
+    border-radius: 12px; 
 }
-.btn:hover {
-    background-color: #2a445a; 
-}
-.paragraph
-{
-    font-size: larger;
-    text-align: center;
-    font-family: sans-serif;
-    color: #355872;
-}
-.outsidelink
-{
-    font-family: sans-serif;
-    color: #355872;
-    text-decoration: none;
-    font-weight: bold;
-    font-size:larger;
+#btn {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #355872; 
+    color: #F7F8F0;               
+    border-radius: 6px;
+    margin: 0 8px;
+    width: 75px;
+    height: 25px;
 }
 
-
-.tableinformation
-{
-    margin: 0 auto;
-}
-.outsideLink
-{
-    text-align: center;
-}
-footer
-{
-    text-align: center;
-    font-size: large;
+#btn:hover {
+    background-color: #2a445a;
+    text-shadow: 1px 1px 2px #729ed8; 
 }

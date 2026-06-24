@@ -1,0 +1,76 @@
+*
+{
+    background-color: #F7F8F0;
+    margin:0px;
+}
+header
+{
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    align-items: center;
+    border: 1px solid #355872;
+    text-align: center;
+}
+.logo
+{
+    width: auto;
+    height: 125px; 
+}
+nav a
+{ 
+    margin: 0 10px;
+    font-family: sans-serif;
+    color: #355872;
+    text-decoration: none;
+    font-weight: bold;
+    font-size:larger;
+}
+.btn {
+    font-family: sans-serif;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #355872; 
+    color: #F7F8F0;               
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    margin: 0 5px;
+    font-size:larger;
+    place-items:  right;
+}
+.Link:hover {
+    color: #2a445a; 
+}
+.btn:hover {
+    background-color: #2a445a; 
+}
+.paragraph
+{
+    font-size: larger;
+    text-align: center;
+    font-family: sans-serif;
+    color: #355872;
+}
+.outsidelink
+{
+    font-family: sans-serif;
+    color: #355872;
+    text-decoration: none;
+    font-weight: bold;
+    font-size:larger;
+}
+
+
+.tableinformation
+{
+    margin: 0 auto;
+}
+.outsideLink
+{
+    text-align: center;
+}
+footer
+{
+    text-align: center;
+    font-size: large;
+}

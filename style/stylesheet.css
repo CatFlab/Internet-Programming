@@ -54,8 +54,28 @@ header
     width: 75px;
     height: 25px;
 }
-
 #btn:hover {
     background-color: #2a445a;
     text-shadow: 1px 1px 2px #729ed8; 
+}
+.hero
+{
+    background-color: #F7F8F0; /* new background color */
+    padding-top: 40px;         /* space below header border */
+    padding-bottom: 40px;
+}
+.hero p
+{
+    color: #355872;
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-shadow: 1px 1px 2px #729ed8;
+    
+}
+.hero-img
+{
+    width: 1500px;
+    height: auto;
+    border-radius: 6px;
 }

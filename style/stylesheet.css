@@ -233,6 +233,13 @@ footer
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 36px;
 }
+.activity-cards2
+{
+    padding: 40px 160px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+}
 .activity-card
 {
     background-color: #F7F8F0;

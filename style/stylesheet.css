@@ -195,7 +195,7 @@ footer
 }
 .activity-hero
 {
-    padding-top: 45px;
+    padding: 45px;
     background-color: #F7F8F0;
 }
 .user-info
@@ -264,4 +264,23 @@ footer
     text-decoration: none;
     font-weight: bold;
     text-shadow: 1px 1px 2px #729ed8;
+}
+.activity-info
+{
+    gap: 36px;
+    display: grid;
+    padding: 20px 32px;
+    border-radius: 12px;
+    background-color: #355872;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.activity-header
+{
+    
+    color: #355872;
+    text-align: left;
+    font-weight: bold;
+    padding-bottom: 10px;
+    font-family: sans-serif;
+    text-shadow: 1px 1px 2px #729ed8; 
 }

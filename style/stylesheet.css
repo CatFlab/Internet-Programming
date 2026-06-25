@@ -178,7 +178,7 @@ footer
 {
     display: flex;
 }
-.user-info h1
+.user-name h1
 {
     padding-top: 10px;
     padding-right: 20px;
@@ -196,4 +196,70 @@ footer
     border-radius: 32px;
     border: 2px solid #2a445a;
     
+}
+.activity-hero
+{
+    padding-top: 45px;
+    background-color: #F7F8F0;
+}
+.user-info
+{
+    margin: 0px auto;
+    width: 1750px;
+    height: 200px;
+    display: flex;
+    border-radius: 12px;
+    align-items: center;
+    border: 2px solid #355872;
+    background-color: #2a445a;
+    box-shadow: 4px 4px 2px #729ed8;
+}
+.user-info img 
+{
+    margin: 0px 20px;
+    width: 160px;
+    height: 160px;
+    border-radius: 108px;
+    border: 2px solid #729ed8;
+}
+.user-info h1
+{
+    text-align: left;
+    color: #F7F8F0;
+    font-family: sans-serif;
+    text-shadow: 1px 1px 2px #729ed8;
+    word-spacing: 1px;
+}
+.activity-cards
+{
+    padding: 40px 160px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 36px;
+
+}
+.activity-card
+{
+    background-color: #F7F8F0;
+    border: 4px solid #2a445a;
+    box-shadow: 4px 4px 2px #729ed8;
+    border-radius: 12px;
+}
+.activity-card h2 
+{
+    padding: 16px;
+    font-family: sans-serif;
+    color: #355872;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #729ed8;
+}
+.activity-card p 
+{
+    padding: 16px;
+    font-family: sans-serif;
+    color: #355872;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #729ed8;
 }

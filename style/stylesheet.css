@@ -9,7 +9,7 @@ header
     display: grid;
     grid-template-columns: auto 2fr auto ;
     align-items: center;
-    border: 2px solid #355872;
+    border-bottom: 2px solid #355872;
     text-align: center;
     margin-bottom: 35px;
 }
@@ -63,6 +63,7 @@ header
     background-color: #F7F8F0; /* new background color */
     padding-top: 40px;         /* space below header border */
     padding-bottom: 40px;
+    border-bottom: 2px solid #355872;
 }
 .hero-btn
 {

@@ -174,3 +174,26 @@ footer
     font-weight: bold;
     text-shadow: 1px 1px 2px #729ed8;
 }
+.user 
+{
+    display: flex;
+}
+.user-info h1
+{
+    padding-top: 10px;
+    padding-right: 20px;
+    text-align: left;
+    color: #355872;
+    font-family: sans-serif;
+    font-size: larger;
+    
+}
+.user-pfp 
+{
+    margin: 0px 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 32px;
+    border: 2px solid #2a445a;
+    
+}

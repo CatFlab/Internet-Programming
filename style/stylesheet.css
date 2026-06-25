@@ -89,9 +89,7 @@ header
     font-size: xx-large;
     font-weight: bold;
     font-family: sans-serif;
-    text-shadow: 1px 1px 2px #729ed8;
-    
-    
+    text-shadow: 1px 1px 2px #729ed8; 
 }
 .hero-img
 {
@@ -185,8 +183,7 @@ footer
     text-align: left;
     color: #355872;
     font-family: sans-serif;
-    font-size: larger;
-    
+    font-size: larger; 
 }
 .user-pfp 
 {
@@ -195,7 +192,6 @@ footer
     height: 60px;
     border-radius: 32px;
     border: 2px solid #2a445a;
-    
 }
 .activity-hero
 {
@@ -236,12 +232,11 @@ footer
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 36px;
-
 }
 .activity-card
 {
     background-color: #F7F8F0;
-    border: 4px solid #2a445a;
+    border: 3px solid #2a445a;
     box-shadow: 4px 4px 2px #729ed8;
     border-radius: 12px;
 }

@@ -1,6 +1,5 @@
 *
 {
-    background-color: #F7F8F0;
     margin:0px;
     text-align: center;
 }
@@ -11,7 +10,7 @@ header
     align-items: center;
     border-bottom: 2px solid #355872;
     text-align: center;
-    margin-bottom: 35px;
+    background-color: #F7F8F0;
 }
 .logo
 {
@@ -60,9 +59,8 @@ header
 }
 .hero
 {
-    background-color: #F7F8F0; /* new background color */
-    padding-top: 40px;         /* space below header border */
-    padding-bottom: 40px;
+    background-color: #F7F8F0; 
+    padding: 50px 0px;
     border-bottom: 2px solid #355872;
 }
 .hero-btn
@@ -100,4 +98,79 @@ header
     width: 1500px;
     height: auto;
     border-radius: 6px;
+}
+.benefit-message
+{
+    padding: 40px 0px;
+    background-color: #2a445a;
+}
+.benefit-message h1 
+{
+    font-family: sans-serif;
+    color: #F7F8F0;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #2a445a;
+    text-shadow: 1px 1px 2px #729ed8;
+}
+.benefit-cards
+{
+    padding: 40px 160px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 36px;
+    background-color: #355872;
+}
+.benefit-card
+{
+    background-color: #F7F8F0;
+    border-right: 2px solid #729ed8;
+    border-bottom: 2px solid #729ed8;
+    box-shadow: 4px 4px 2px #2a445a;
+    border-radius: 12px;
+}
+.benefit-card h2 
+{
+    padding: 16px;
+    font-family: sans-serif;
+    color: #355872;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #729ed8;
+}
+.benefit-card p 
+{
+    padding: 16px;
+    font-family: sans-serif;
+    color: #355872;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #729ed8;
+}
+footer
+{
+    padding:20px 20px;
+    background-color: #2a445a;
+}
+footer a
+{
+    padding: 25px; 
+    font-family: sans-serif;
+    color: #F7F8F0;
+    text-decoration: none;
+    font-size:larger;
+    font-weight: bold;
+}
+footer a:hover
+{
+    color: #729ed8;
+}
+.rights 
+{
+    padding-top: 20px;
+    font-family: sans-serif;
+    color: #F7F8F0;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #729ed8;
 }

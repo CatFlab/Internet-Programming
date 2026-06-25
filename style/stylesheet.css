@@ -152,7 +152,7 @@ footer
     padding:20px 20px;
     background-color: #2a445a;
 }
-footer a
+.outsidelink
 {
     padding: 25px; 
     font-family: sans-serif;
@@ -161,7 +161,7 @@ footer a
     font-size:larger;
     font-weight: bold;
 }
-footer a:hover
+.outsidelink:hover
 {
     color: #729ed8;
 }

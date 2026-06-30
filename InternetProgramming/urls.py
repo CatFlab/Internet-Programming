@@ -16,7 +16,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-import pages2
 
 urlpatterns = [
     path('', include('pages2.urls')),

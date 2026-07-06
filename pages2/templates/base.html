@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+        <link rel="icon" type="icon" href="{% static 'images/Website Icon 2.png' %}">
+    </head>
+    <body>
+        {% include "includes/navbar.html" %}
+
+        {% block main-content%}{% endblock%}
+
+        {% include "includes/footer.html" %}
+    </body>
+</html>
+<!-- This is a comment -->

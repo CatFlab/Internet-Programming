@@ -1,33 +1,6 @@
-<!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Dalilik Homepage</title>
-        <link rel="stylesheet" href="../../style/stylesheet.css">
-        <link rel="icon" type="icon" href="../../images/Website Icon 2.png">
-    </head>
-    <body>
-        <header>
-            <img src = "../../images/project logo 5.png", alt="Website logo", class="logo">    
-            <nav>
-                <a href ="Index.html" class="Link">Home</a>
-                <a href = "Event.html" class="Link">Event</a>
-                <a href = "Interactive_map.html" class="Link">Interactive map</a>
-                <a href = "Contact_us.html" class="Link">Contact us</a>
-                <a href = "About_us.html" class="Link">About us</a>
-            </nav>
-            <section>
-                <a href = "Register.html" class="Link" id="btn">Register</a>
-                <a href = "Login.html" class="Link" id="btn">Login</a>
-            </section>
-        </header>
-        <main>
+{% extends "base.html" %}
+{% load static %}
 
-        </main>
-            <footer>
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="outsidelink">Coding dictionary</a>
-                <a href="https://www.youtube.com/watch?v=L8XbI9aJOXk" class="outsidelink">Personal Projects Bought from Microsoft, Nvidia and AMD</a>
-                <h2 class="rights">© Dalilik 2026, all rights are reserved to Dalilik</p>
-            </footer>
-    </body>
-</html>
+{% block title %}Dalilik - Register{% endblock %}
+
+{% block main-content%}{% endblock%}

@@ -1,0 +1,37 @@
+{% load static %}
+
+<div class="menu">
+    <header>
+        <img src="{% static 'images/project logo 5.png' %}" alt="Website logo" class="logo">
+
+        <nav>
+            <a href="{% url 'index' %}" class="Link {% if active_page == 'home' %}active{% endif %}">Home</a>
+            <a href="{% url 'event' %}" class="Link {% if active_page == 'event' %}active{% endif %}">Event</a>
+            <a href="{% url 'interactivemap' %}" class="Link {% if active_page == 'map' %}active{% endif %}">Interactive Map</a>
+            {% if active_page == "login" %}
+            <a href="{% url 'activitycenter' %}" class="Link {% if active_page == 'activitycenter' %}active{% endif %}">Activity Center</a>
+            {% endif %}
+            {% if active_page == "activitycenter" %}
+            <a href="{% url 'activitycenter' %}" class="Link">Activity Center</a>
+            {% endif %}
+            <a href="{% url 'contact' %}" class="Link {% if active_page == 'contact' %}active{% endif %}">Contact us</a>
+            <a href="{% url 'about' %}" class="Link {% if active_page == 'about' %}active{% endif %}">About us</a>
+        </nav>
+        
+        {% if active_page != "activitycenter" %}
+        <section>
+            <a href="{% url 'register' %}" class="Link" id="btn">Register</a>
+            <a href="{% url 'login' %}" class="Link" id="btn">Login</a>
+        </section>
+        {% endif %}
+
+        {% if active_page == "activitycenter" %}
+        <section class="user">
+        <img src="{% static 'images/user image.jpg' %}" alt="Registered user profile picture" class="user-pfp">
+        <div class="user-name">
+            <h1>Welcome, <br>Yahya Husain</h1>
+        </div>
+        </section>
+        {% endif %}
+    </header>
+</div>

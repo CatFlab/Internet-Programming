@@ -1,32 +1,14 @@
-<!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Dalilik Homepage</title>
-        <link rel="stylesheet" href="../../style/stylesheet.css">
-        <link rel="icon" type="icon" href="../../images/Website Icon 2.png">
-    </head>
-    <body>
-        <header>
-            <img src = "../../images/project logo 5.png", alt="Website logo", class="logo">    
-            <nav>
-                <a href ="Index.html" class="Link">Home</a>
-                <a href = "Event.html" class="Link">Event</a>
-                <a href = "Interactive_map.html" class="Link">Interactive map</a>
-                <a href = "Activity_Center.html" class="Link active">Activity Center</a>
-                <a href = "Contact_us.html" class="Link">Contact us</a>
-                <a href = "About_us.html" class="Link">About us</a>
-            </nav>
-            <section class="user">
-                <img src="../../images/user image.jpg" alt="Registered user profile picture" class="user-pfp">
-                <div class="user-name">
-                    <h1>Welcome, <br>Yahya Husain</h1>
-                </div>
-            </section>
-        </header>
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Dalilik - Activity Center{% endblock %}
+
+
+
+{% block main-content%}      
         <main class="activity-hero">
             <section class="user-info">
-                <img src="../../images/user image.jpg" alt="Registered user profile picture" class="user-big-pfp">
+                <img src="{% static 'images/user image.jpg' %}" alt="Registered user profile picture" class="user-big-pfp">
                 <div>
                     <h1>Yahya Husain <br>PAAET, Computer Science</h1>
                 </div>
@@ -75,10 +57,4 @@
                 </div>
             </section>
         </main>
-            <footer>
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="outsidelink">Coding dictionary</a>
-                <a href="https://www.youtube.com/watch?v=L8XbI9aJOXk" class="outsidelink">Personal Projects Bought from Microsoft, Nvidia and AMD</a>
-                <h2 class="rights">© Dalilik 2026, all rights are reserved to Dalilik</p>
-            </footer>
-    </body>
-</html>
+{% endblock%}

@@ -1,34 +1,15 @@
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Dalilik Homepage</title>
-        <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
-        <link rel="icon" type="icon" href="{% static 'images/Website Icon 2.png' %}">
-    </head>
-    <body>
-        <div class="menu">
-            <header>
-            <img src = "{% static 'images/project logo 5.png' %}", alt="Website logo", class="logo">    
-                <nav>
-                    <a href ="index.html" class="Link active">Home</a>
-                    <a href = "Event.html" class="Link">Event</a>
-                    <a href = "Interactive_map.html" class="Link">Interactive map</a>
-                    <a href = "Contact_us.html" class="Link">Contact us</a>
-                    <a href = "About_us.html" class="Link">About us</a>
-                </nav>
-                <section>
-                    <a href = "Register.html" class="Link" id="btn">Register</a>
-                    <a href = "Login.html" class="Link" id="btn">Login</a>
-                </section>
-            </header>
-        </div>
+
+{% block title %}Dalilik - Homepage{% endblock %}
+
+
+{% block main-content%}
         <main>
             <section class="hero">
                 <a href = "#discord" class="hero-btn">Join our Community</a>
                 <h1 class="hero-message">Dalilik your guide for study locations, course notes, and <br> interactive map for Univeristy/College campus!</h1>
-                <img src="../../images/hero img.png", alt="Big picture that informes the visitor of the website Registered user perks", class="hero-img">
+                <img src="{% static 'images/hero img.png' %}", alt="Big picture that informes the visitor of the website Registered user perks", class="hero-img">
             </section>
             <section class="benefit-message">
                 <h1>BENEFITS SECTION : WHY BECOME A MEMBER?</h1>
@@ -49,11 +30,6 @@
                 </div>
             </section>
         </main>
-            <footer>
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="outsidelink">Coding dictionary</a>
-                <a href="https://www.youtube.com/watch?v=L8XbI9aJOXk" class="outsidelink">Personal Projects Bought from Microsoft, Nvidia and AMD</a>
-                <h2 class="rights">© Dalilik 2026, all rights are reserved to Dalilik</p>
-            </footer>
-    </body>
-</html>
+{% endblock%}
+
 <!-- This is a comment -->

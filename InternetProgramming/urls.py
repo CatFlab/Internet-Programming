@@ -19,5 +19,6 @@ from django.urls import include, path
 
 
 urlpatterns = [
+    path('admin/', admin.site.urls), # username : Yahya. | password : Y796024415ia.
     path('', include("pages2.urls")),  # Include the URLs from the pages2 app
 ]

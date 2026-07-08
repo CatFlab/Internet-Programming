@@ -3,4 +3,49 @@
 
 {% block title %}Dalilik - Interactive map{% endblock %}
 
-{% block main-content%}{% endblock%}
+{% block main-content %}
+<h1>Interactive Map</h1>
+
+<h2>Maps</h2>
+{% if maps %}
+	<table border="1" class="tableinformation">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Description</th>
+				<th>Picture</th>
+				<th>Buildings</th>
+			</tr>
+		</thead>
+		<tbody>
+		{% for m in maps %}
+			<tr>
+				<td>{{ m.name }}</td>
+				<td>{{ m.description }}</td>
+				<td>
+					{% if m.picture %}
+						<img src="{{ m.picture.url }}" alt="{{ m.name }}" style="max-width:200px; height:auto;" />
+					{% else %}
+						(no image)
+					{% endif %}
+				</td>
+				<td>
+					{% if m.buildings.exists %}
+						<ul>
+						{% for b in m.buildings.all %}
+							<li>{{ b.name }}</li>
+						{% endfor %}
+						</ul>
+					{% else %}
+						(no buildings)
+					{% endif %}
+				</td>
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+{% else %}
+	<p>No maps found.</p>
+{% endif %}
+
+{% endblock %}

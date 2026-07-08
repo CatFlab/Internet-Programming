@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .models import Map
+
 
 def index(request):
     return render(request, 'index.html', {"active_page": "home"})
@@ -21,5 +23,6 @@ def login(request):
 def activitycenter(request):
     return render(request, 'Activity_Center.html', {"active_page": "activitycenter"})
 
-def interactivemap (request):
-    return render(request, 'Interactive_Map.html', {"active_page": "map"})
+def interactivemap(request):
+    maps = Map.objects.prefetch_related('buildings').all()
+    return render(request, 'Interactive_Map.html', {"active_page": "map", "maps": maps})

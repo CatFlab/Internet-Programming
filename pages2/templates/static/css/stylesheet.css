@@ -325,7 +325,7 @@ footer
     grid-template-columns: 1fr 2.5fr;
     gap: 40px;
     padding: 50px;
-    background-color: #355872;
+    background-color: rgb(53 88 114 / 85%);
     min-height: 700px;
     align-items: start;
 }

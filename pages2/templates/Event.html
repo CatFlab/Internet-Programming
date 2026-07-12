@@ -3,4 +3,10 @@
 
 {% block title %}Dalilik - Event{% endblock %}
 
-{% block main-content%}{% endblock%}
+{% block main-content%}
+<form method="post">
+    {% csrf_token %}    
+    {{ event_form.as_p }}
+    <button type="submit">Submit event</button>
+</form>
+{% endblock%}   

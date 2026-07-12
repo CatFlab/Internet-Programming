@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Map, Event
+from .forms import EventForm
 
 
 def index(request):
@@ -12,8 +13,9 @@ def contact(request):
     return render(request, 'Contact_us.html', {"active_page": "contact"})
 
 def event(request):
+    event_form = EventForm()
     events = Event.objects.all()
-    return render(request, 'Event.html', {"active_page": "event", "events": events})
+    return render(request, 'Event.html', {"active_page": "event", "events": events, "event_form": event_form})
 
 def register(request):
     return render(request, 'Register.html', {"active_page": "register"})

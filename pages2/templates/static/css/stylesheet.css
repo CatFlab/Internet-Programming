@@ -1,7 +1,7 @@
 *
 {
     margin:0px;
-    text-align: center;
+    text-align:center ;
 }
 header
 {
@@ -286,5 +286,118 @@ footer
 }
 .tableinformation
 {
+    width: 95%;
     margin: 45px auto;
+    border-collapse: collapse;
+    background-color: #F7F8F0;
+    font-family: sans-serif;
+    color: #355872;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 4px 4px 2px #729ed8;
+}
+
+.tableinformation th
+{
+    background-color: #355872;
+    color: #F7F8F0;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #2a445a;
+}
+
+.tableinformation td
+{
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #729ed8;
+    font-weight: bold;
+}
+
+.tableinformation tr:hover
+{
+    background-color: #dce6f2;
+}
+.event-page
+{
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    gap: 40px;
+    padding: 50px;
+    background-color: rgb(53 88 114 / 85%);
+    min-height: 700px;
+    align-items: start;
+}
+.event-form
+{
+    margin: 45px;
+    padding: 25px;
+    background-color: #F7F8F0;
+    border: 2px solid #355872;
+    border-radius: 12px;
+    box-shadow: 4px 4px 2px #729ed8;
+}
+
+.event-form h2
+{
+    color: #355872;
+    font-family: sans-serif;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 2px #729ed8;
+}
+
+.event-form form p
+{
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.event-form label
+{
+    display: block;
+    color: #355872;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.event-form input,
+.event-form textarea,
+.event-form select
+{
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #355872;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: #2a445a;
+}
+
+.event-form input:focus,
+.event-form textarea:focus,
+.event-form select:focus
+{
+    outline: none;
+    border-color: #729ed8;
+    box-shadow: 0px 0px 5px #729ed8;
+}
+
+.event-form button
+{
+    padding: 10px 15px;
+    margin-top: 15px;
+    background-color: #355872;
+    color: #F7F8F0;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.event-form button:hover
+{
+    background-color: #2a445a;
+    text-shadow: 1px 1px 2px #729ed8;
 }

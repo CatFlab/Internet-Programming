@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from .models import Map, Event
 from .forms import EventForm
 
@@ -12,11 +12,6 @@ def about(request):
 def contact(request):
     return render(request, 'Contact_us.html', {"active_page": "contact"})
 
-def event(request):
-    event_form = EventForm()
-    events = Event.objects.all()
-    return render(request, 'Event.html', {"active_page": "event", "events": events, "event_form": event_form})
-
 def register(request):
     return render(request, 'Register.html', {"active_page": "register"})
 
@@ -29,3 +24,24 @@ def activitycenter(request):
 def interactivemap(request):
     maps = Map.objects.all()
     return render(request, 'Interactive_Map.html', {"active_page": "map", "maps": maps})
+
+def event(request):
+    event_form = EventForm()
+    events = Event.objects.all()
+    return render(request, 'Event.html', {"active_page": "event", "events": events, "event_form": event_form})
+
+
+def event_create(request):
+    if request.method == "POST":
+        event_form = EventForm(request.POST)
+        if event_form.is_valid():
+            event_form.save()
+            action = request.POST.get('action')
+            if action == 'save_add':
+                return redirect('event_create')
+            return redirect('event')
+
+        events = Event.objects.all()
+        return render(request, 'Event.html', {"active_page": "event", "events": events, "event_form": event_form})
+
+    return redirect('event')

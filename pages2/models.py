@@ -38,6 +38,7 @@ class Room(models.Model):
     
 class Event(models.Model):
     name = models.CharField(max_length=100)
+    organizer = models.CharField(max_length=100)
     description = models.TextField()
     dateandtime = models.DateTimeField()
     room = models.ForeignKey(Room, on_delete=models.CASCADE, related_name='events')

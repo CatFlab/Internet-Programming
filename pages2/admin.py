@@ -19,4 +19,4 @@ class RoomAdmin(admin.ModelAdmin):
 
 @admin.register(Event)
 class EventAdmin(admin.ModelAdmin):
-    list_display = ('name', 'description', 'dateandtime', 'room')
+    list_display = ('name', 'organizer', 'description', 'dateandtime', 'room')

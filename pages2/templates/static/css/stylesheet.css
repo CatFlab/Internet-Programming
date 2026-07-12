@@ -366,10 +366,11 @@ footer
 .event-form textarea,
 .event-form select
 {
-    width: 90%;
+    width: 100%;
     padding: 8px;
     border: 2px solid #355872;
     border-radius: 6px;
+    box-sizing: border-box;
     font-family: sans-serif;
     color: #2a445a;
 }

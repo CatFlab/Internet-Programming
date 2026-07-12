@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Map
+from .models import Map, Event
 
 
 def index(request):
@@ -12,7 +12,8 @@ def contact(request):
     return render(request, 'Contact_us.html', {"active_page": "contact"})
 
 def event(request):
-    return render(request, 'Event.html', {"active_page": "event"})
+    events = Event.objects.all()
+    return render(request, 'Event.html', {"active_page": "event", "events": events})
 
 def register(request):
     return render(request, 'Register.html', {"active_page": "register"})
@@ -24,5 +25,5 @@ def activitycenter(request):
     return render(request, 'Activity_Center.html', {"active_page": "activitycenter"})
 
 def interactivemap(request):
-    maps = Map.objects.prefetch_related('buildings').all()
+    maps = Map.objects.all()
     return render(request, 'Interactive_Map.html', {"active_page": "map", "maps": maps})

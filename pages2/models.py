@@ -40,7 +40,7 @@ class Event(models.Model):
     name = models.CharField(max_length=100)
     organizer = models.CharField(max_length=100, default="")
     description = models.TextField()
-    dateandtime = models.DateTimeField()
+    date_and_time = models.DateTimeField()
     room = models.ForeignKey(Room, on_delete=models.CASCADE, related_name='events')
 
     def __str__(self):

@@ -31,7 +31,7 @@
                 {% for event in events %}
                     <tr>
                         <td>
-                            <a href="{% url 'event_detail' event.id %}">
+                            <a href="{% url 'event_detail' event.id %}" class="event-name">
                                 {{ event.name }}
                             </a>
                         </td>

@@ -466,3 +466,13 @@ footer
 {
     background:#2a445a;
 }
+.event-name
+{
+    color: #2a445a;
+    font-weight: bolder;
+}
+
+.event-name:hover
+{
+    color: #729ed8;
+}

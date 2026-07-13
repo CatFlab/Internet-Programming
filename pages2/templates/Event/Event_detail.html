@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Dalilik - Event Details
+{% endblock %}
+
+{% block main-content %}
+
+<section class="event-detail-page">
+
+    <div class="event-detail-card">
+
+        <h1>{{ event.name }}</h1>
+
+        <div class="detail-row">
+            <h2>Organizer</h2>
+            <p>{{ event.organizer }}</p>
+        </div>
+
+        <div class="detail-row">
+            <h2>Description</h2>
+            <p>{{ event.description }}</p>
+        </div>
+
+        <div class="detail-row">
+            <h2>Date</h2>
+            <p>{{ event.date }}</p>
+        </div>
+
+        <div class="detail-row">
+            <h2>Time</h2>
+            <p>{{ event.time }}</p>
+        </div>
+
+        <div class="detail-row">
+            <h2>Room</h2>
+            <p>{{ event.room }}</p>
+        </div>
+
+        <br>
+
+        <a class="back-button" href="{% url 'event' %}">
+            ← Back to Events
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,4 +1,4 @@
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect, render, get_object_or_404
 from .models import Map, Event
 from .forms import EventForm
 
@@ -31,8 +31,11 @@ def interactivemap(request):
 def event(request):
     event_form = EventForm()
     events = Event.objects.all()
-    return render(request, 'Event.html', {"active_page": "event", "events": events, "event_form": event_form})
+    return render(request, 'Event/Event.html', {"active_page": "event", "events": events, "event_form": event_form})
 
+def event_detail(request, id):
+    event = get_object_or_404(Event, id=id)
+    return render(request, 'Event/Event_Detail.html', {"active_page": "event", "event": event})
 
 def event_create(request):
     if request.method == "POST":

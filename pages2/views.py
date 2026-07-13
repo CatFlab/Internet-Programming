@@ -25,6 +25,9 @@ def interactivemap(request):
     maps = Map.objects.all()
     return render(request, 'Interactive_Map.html', {"active_page": "map", "maps": maps})
 
+
+######################### Event Section #########################
+
 def event(request):
     event_form = EventForm()
     events = Event.objects.all()
@@ -45,3 +48,5 @@ def event_create(request):
         return render(request, 'Event.html', {"active_page": "event", "events": events, "event_form": event_form})
 
     return redirect('event')
+
+#################################################################

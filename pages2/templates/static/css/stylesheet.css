@@ -404,10 +404,15 @@ footer
 .event-detail-page
 {
     display:flex;
-    justify-content:center;
-    align-items:center;
-    background-color:#5b7890;
     padding:50px;
+    align-items:center;
+    justify-content:center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../images/Login Background.png");
+    
 }
 
 .event-detail-card
@@ -468,11 +473,5 @@ footer
 }
 .event-name
 {
-    color: #2a445a;
-    font-weight: bolder;
-}
-
-.event-name:hover
-{
-    color: #729ed8;
+    text-decoration: none;
 }

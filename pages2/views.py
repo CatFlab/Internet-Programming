@@ -48,7 +48,7 @@ def event_create(request):
             return redirect('event')
 
         events = Event.objects.all()
-        return render(request, 'Event.html', {"active_page": "event", "events": events, "event_form": event_form})
+        return render(request, 'event/Event.html', {"active_page": "event", "events": events, "event_form": event_form})
 
     return redirect('event')
 

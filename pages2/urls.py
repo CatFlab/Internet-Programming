@@ -12,6 +12,8 @@ urlpatterns = [
     path('Event.html', views.event, name='event'),
     path('event-create/', views.event_create, name='event_create'),
     path('event/<int:id>/', views.event_detail, name='event_detail'),
+    path('event/<int:id>/edit/', views.event_edit, name='event_edit'),
+    path('event/<int:id>/delete/', views.event_delete, name='event_delete'),
 
 #################################################################
 

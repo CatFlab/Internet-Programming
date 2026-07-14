@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Dalilik - Delete Event
+{% endblock %}
+
+{% block main-content %}
+
+<section class="event-delete-page">
+
+    <div class="event-delete-card">
+
+        <h1>Delete Event</h1>
+
+        <p class="delete-message">
+            Are you sure you want to delete
+            <strong>"{{ event.name }}"</strong>?
+        </p>
+
+        <form method="post">
+            {% csrf_token %}
+
+            <div class="delete-buttons">
+                <button type="submit">
+                    Yes, Delete Event
+                </button>
+
+                <a href="{% url 'event_detail' event.id %}">
+                    Cancel
+                </a>
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
+
+{% endblock %}

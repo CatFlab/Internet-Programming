@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Dalilik - Edit Event
+{% endblock %}
+
+{% block main-content %}
+
+<section class="event-edit-page">
+
+    <div class="event-edit-card">
+
+        <h1>Edit Event</h1>
+
+        <form method="post">
+            {% csrf_token %}
+
+            <div class="edit-row">
+                <h2>Event Name</h2>
+                {{ event_form.name }}
+            </div>
+
+            <div class="edit-row">
+                <h2>Organizer</h2>
+                {{ event_form.organizer }}
+            </div>
+
+            <div class="edit-row">
+                <h2>Description</h2>
+                {{ event_form.description }}
+            </div>
+
+            <div class="edit-row">
+                <h2>Date</h2>
+                {{ event_form.date }}
+            </div>
+
+            <div class="edit-row">
+                <h2>Time</h2>
+                {{ event_form.time }}
+            </div>
+
+            <div class="edit-row">
+                <h2>Room</h2>
+                {{ event_form.room }}
+            </div>
+
+            <div class="edit-buttons">
+                <button type="submit">
+                    Save Changes
+                </button>
+
+                <a href="{% url 'event_detail' event.id %}">
+                    Cancel
+                </a>
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -26,6 +26,8 @@
                         <th>Time</th>
 				        <th>Room</th>
                         <th>Details</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
 			        </tr>
 		        </thead>
                 <tbody>
@@ -42,6 +44,16 @@
                                 ℹ️
                             </a>
                            
+                        </td>
+                        <td>
+                            <a href="{% url 'event_edit' event.id %}" class="event-name">
+                                ✏️
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{% url 'event_delete' event.id %}" class="event-name">
+                                ❌
+                            </a>
                         </td>
                     </tr>
                 {% endfor %}

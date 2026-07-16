@@ -8,7 +8,7 @@
             <a href="{% url 'index' %}" class="Link {% if active_page == 'home' %}active{% endif %}">Home</a>
             <a href="{% url 'event' %}" class="Link {% if active_page == 'event' %}active{% endif %}">Event</a>
             <a href="{% url 'interactivemap' %}" class="Link {% if active_page == 'map' %}active{% endif %}">Interactive Map</a>
-            {% if active_page == "login" %}
+            {% if page_active == "login" %}
             <a href="{% url 'activitycenter' %}" class="Link {% if active_page == 'activitycenter' %}active{% endif %}">Activity Center</a>
             {% endif %}
             {% if active_page == "activitycenter" %}

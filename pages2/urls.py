@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views 
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('', views.index, name='home'),
@@ -18,7 +19,7 @@ urlpatterns = [
 #################################################################
 
     path('Register.html', views.register, name='register'),
-    path('Login.html', views.login, name='login'),
+    path('registration/Login.html', auth_views.LoginView.as_view(), name='login'),
     path('Activity_Center.html', views.activitycenter, name='activitycenter'),
     path('Interactive_map.html', views.interactivemap, name='interactivemap'),
 ]

@@ -15,9 +15,6 @@ def contact(request):
 def register(request):
     return render(request, 'Register.html', {"active_page": "register"})
 
-def login(request):
-    return render(request, 'Login.html', {"active_page": "login"})
-
 def activitycenter(request):
     return render(request, 'Activity_Center.html', {"active_page": "activitycenter"})
 

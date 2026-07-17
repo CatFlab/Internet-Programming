@@ -1,4 +1,8 @@
+from urllib import request
+
+from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import redirect, render, get_object_or_404
+from django.contrib.auth import login
 from .models import Map, Event
 from .forms import EventForm
 
@@ -12,15 +16,26 @@ def about(request):
 def contact(request):
     return render(request, 'Contact_us.html', {"active_page": "contact"})
 
-def register(request):
-    return render(request, 'Register.html', {"active_page": "register"})
-
 def activitycenter(request):
     return render(request, 'Activity_Center.html', {"active_page": "activitycenter"})
 
 def interactivemap(request):
     maps = Map.objects.all()
     return render(request, 'Interactive_Map.html', {"active_page": "map", "maps": maps})
+
+######################### Register Section #########################
+
+def register(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect('home')
+    else:
+        form = UserCreationForm()
+    return render(request, 'registration/Register.html', {'form': form})
+
 
 
 ######################### Event Section #########################

@@ -790,3 +790,107 @@ footer
     background-color: #2a445a;
     text-shadow: 1px 1px 2px #729ed8;
 }
+.register-page
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 50px;
+    background-image: url("../images/Login Background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.register-card
+{
+    width: 500px;
+    background: #F7F8F0;
+    border: 2px solid #355872;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 4px 4px 2px #729ed8;
+}
+
+.register-card h1
+{
+    color: #355872;
+    margin-bottom: 35px;
+    font-family: sans-serif;
+    text-shadow: 1px 1px 2px #729ed8;
+}
+
+.register-row
+{
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.register-row h2
+{
+    margin-bottom: 8px;
+    color: #355872;
+    font-family: sans-serif;
+    text-shadow: 1px 1px 2px #729ed8;
+}
+
+.register-row input
+{
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #355872;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #355872;
+    font-family: sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.register-row input:focus
+{
+    outline: none;
+    border-color: #729ed8;
+    box-shadow: 0 0 5px #729ed8;
+}
+
+.register-buttons
+{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.register-buttons button,
+.register-buttons a
+{
+    padding: 12px 24px;
+    background: #355872;
+    color: #F7F8F0;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.register-buttons button:hover,
+.register-buttons a:hover
+{
+    background: #2a445a;
+}
+
+.register-error
+{
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #F7F8F0;
+    color: #b22222;
+    border: 2px solid #b22222;
+    border-radius: 8px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #729ed8;
+}

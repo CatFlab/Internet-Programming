@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Dalilik - Register
+{% endblock %}
+
+{% block main-content %}
+
+<section class="register-page">
+
+    <div class="register-card">
+
+        <h1>Register</h1>
+
+        {% if form.errors %}
+            <div class="register-error">
+                Please correct the errors below.
+            </div>
+        {% endif %}
+
+        <form method="post">
+            {% csrf_token %}
+
+            <div class="register-row">
+                <h2>Username</h2>
+                {{ form.username }}
+            </div>
+
+            <div class="register-row">
+                <h2>Password</h2>
+                {{ form.password1 }}
+            </div>
+
+            <div class="register-row">
+                <h2>Confirm Password</h2>
+                {{ form.password2 }}
+            </div>
+
+            <div class="register-buttons">
+                <button type="submit">Register</button>
+                <a href="{% url 'login' %}">Login</a>
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
+
+{% endblock %}

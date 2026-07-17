@@ -18,7 +18,7 @@ urlpatterns = [
 
 #################################################################
 
-    path('Register.html', views.register, name='register'),
+    path('registration/Register.html', views.register, name='register'),
     path('registration/Login.html', auth_views.LoginView.as_view(), name='login'),
     path('registration/Logout.html', auth_views.LogoutView.as_view(), name='logout'),
     path('Activity_Center.html', views.activitycenter, name='activitycenter'),

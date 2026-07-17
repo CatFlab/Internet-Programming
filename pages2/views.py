@@ -15,6 +15,9 @@ def contact(request):
 def register(request):
     return render(request, 'Register.html', {"active_page": "register"})
 
+def login_page(request):
+    return render(request, 'registration/Login.html', {"active_page": "login"})
+
 def activitycenter(request):
     return render(request, 'Activity_Center.html', {"active_page": "activitycenter"})
 
@@ -68,4 +71,5 @@ def event_delete(request, id):
         event.delete()
         return redirect('event')
     return render(request, 'Event/Event_Delete.html', {"active_page": "event", "event": event})
+    
 #################################################################

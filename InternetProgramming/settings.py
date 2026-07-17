@@ -124,3 +124,5 @@ STATICFILES_DIRS = [
 # Media files (user-uploaded files)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+LOGIN_REDIRECT_URL = '/'  # Redirect to home page after login

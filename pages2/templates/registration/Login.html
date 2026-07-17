@@ -1,6 +1,46 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}Dalilik - Login{% endblock %}
+{% block title %}
+Dalilik - Login
+{% endblock %}
 
-{% block main-content%}{% endblock%}
+{% block main-content %}
+
+<section class="login-page">
+
+    <div class="login-card">
+
+    <h1>Login</h1>
+
+    {% if form.errors %}
+        <div class="login-error">
+            User not found or incorrect password.
+        </div>
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+
+        <div class="login-row">
+            <h2>Username</h2>
+            {{ form.username }}
+        </div>
+
+        <div class="login-row">
+            <h2>Password</h2>
+            {{ form.password }}
+        </div>
+
+        <div class="login-buttons">
+            <button type="submit">Login</button>
+            <a href="{% url 'register' %}">Register</a>
+        </div>
+
+    </form>
+
+</div>
+
+</section>
+
+{% endblock %}

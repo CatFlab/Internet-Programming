@@ -3,34 +3,33 @@
 <div class="menu">
     <header>
         <img src="{% static 'images/project logo 5.png' %}" alt="Website logo" class="logo">
-
         <nav>
             <a href="{% url 'index' %}" class="Link {% if active_page == 'home' %}active{% endif %}">Home</a>
             <a href="{% url 'event' %}" class="Link {% if active_page == 'event' %}active{% endif %}">Event</a>
             <a href="{% url 'interactivemap' %}" class="Link {% if active_page == 'map' %}active{% endif %}">Interactive Map</a>
-            {% if page_active == "login" %}
+            {% if user.is_authenticated %}
             <a href="{% url 'activitycenter' %}" class="Link {% if active_page == 'activitycenter' %}active{% endif %}">Activity Center</a>
-            {% endif %}
-            {% if active_page == "activitycenter" %}
-            <a href="{% url 'activitycenter' %}" class="Link">Activity Center</a>
             {% endif %}
             <a href="{% url 'contact' %}" class="Link {% if active_page == 'contact' %}active{% endif %}">Contact us</a>
             <a href="{% url 'about' %}" class="Link {% if active_page == 'about' %}active{% endif %}">About us</a>
         </nav>
-        
-        {% if active_page != "activitycenter" %}
+        {% if user.is_authenticated %}
+        <section class="user">
+            <img src="{% static 'images/user image.jpg' %}" alt="Registered user profile picture" class="user-pfp">
+            <div class="user-name">
+                <h1>
+                    Welcome, <br>{{ user.username }}
+                </h1>
+            </div>
+                <form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="logout-btn">Logout</button>
+                </form>
+        </section>
+        {% else %}
         <section>
             <a href="{% url 'register' %}" class="Link" id="btn">Register</a>
             <a href="{% url 'login' %}" class="Link" id="btn">Login</a>
-        </section>
-        {% endif %}
-
-        {% if active_page == "activitycenter" %}
-        <section class="user">
-        <img src="{% static 'images/user image.jpg' %}" alt="Registered user profile picture" class="user-pfp">
-        <div class="user-name">
-            <h1>Welcome, <br>Yahya Husain</h1>
-        </div>
         </section>
         {% endif %}
     </header>

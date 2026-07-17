@@ -5,12 +5,20 @@
 }
 header
 {
-    display: grid;
-    grid-template-columns: auto 2fr auto ;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    position: relative;
     border-bottom: 2px solid #355872;
-    text-align: center;
     background-color: #F7F8F0;
+}
+nav
+{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
 }
 .logo
 {
@@ -175,19 +183,28 @@ footer
 .user 
 {
     display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 20px;
+    white-space: nowrap;
 }
+
 .user-name h1
 {
-    padding-top: 10px;
-    padding-right: 20px;
+    margin: 0;
     text-align: left;
     color: #355872;
     font-family: sans-serif;
-    font-size: larger; 
+    font-size: larger;
+}
+
+.user #btn
+{
+    margin-left: 15px;
 }
 .user-pfp 
 {
-    margin: 0px 20px;
+    margin: 0px 5px;
     width: 60px;
     height: 60px;
     border-radius: 32px;
@@ -746,5 +763,30 @@ footer
     border-radius: 8px;
     font-family: sans-serif;
     font-weight: bold;
+    text-shadow: 1px 1px 2px #729ed8;
+}
+.logout-btn
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 18px;
+    background-color: #355872;
+    color: #F7F8F0;
+    width: 100px;
+    height: 40px;
+    border-radius: 6px;
+    border: none;
+
+    font-family: sans-serif;
+    font-size: larger;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.logout-btn:hover
+{
+    background-color: #2a445a;
     text-shadow: 1px 1px 2px #729ed8;
 }

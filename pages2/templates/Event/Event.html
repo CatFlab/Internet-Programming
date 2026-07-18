@@ -5,6 +5,7 @@
 
 {% block main-content%}
 <section class="event-page">
+    {% if user.is_authenticated %}
     <div class="event-form">
         <h2>Create an Event</h2>
         <form method="post" action="{% url 'event_create' %}">
@@ -14,7 +15,8 @@
             <button type="submit" name="action" value="save_add">Submit event & Add another</button>
         </form>
     </div>
-    <div class="event-table">
+    {% endif %}
+    <div class="event-table {% if not user.is_authenticated %}full-width{% endif %}">
         {% if events %}
 	        <table border="1" class="tableinformation">
 		        <thead>
@@ -26,8 +28,10 @@
                         <th>Time</th>
 				        <th>Room</th>
                         <th>Details</th>
+                        {% if user.is_authenticated %}
                         <th>Edit</th>
                         <th>Delete</th>
+                        {% endif %}
 			        </tr>
 		        </thead>
                 <tbody>
@@ -45,6 +49,7 @@
                             </a>
                            
                         </td>
+                        {% if user.is_authenticated %}
                         <td>
                             <a href="{% url 'event_edit' event.id %}" class="event-name">
                                 ✏️
@@ -55,6 +60,7 @@
                                 ❌
                             </a>
                         </td>
+                        {% endif %}
                     </tr>
                 {% endfor %}
                 </tbody>
